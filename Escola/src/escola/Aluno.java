@@ -12,9 +12,13 @@ public class Aluno extends Pessoa{
 		CR = cR;
 	}
 
-	public Aluno(String nome, double cR) {
+	public Aluno(String nome) {
 		super(nome);
-		CR = cR;
+		this.CR = 0;
+	}
+
+	public double getRemuneracao(){
+		return 0;
 	}
 	
 	

@@ -1,6 +1,6 @@
 package escola;
 
-public class Professor {
+public class Professor extends Pessoa{
 
 	private double salario;
 
@@ -12,9 +12,13 @@ public class Professor {
 		this.salario = salario;
 	}
 
-	public Professor(double salario) {
-		super();
+	public Professor(String nome, double salario) {
+		super(nome);
 		this.salario = salario;
+	}
+	
+	public double getRemuneracao() {
+		return this.getSalario();
 	}
 
 }
