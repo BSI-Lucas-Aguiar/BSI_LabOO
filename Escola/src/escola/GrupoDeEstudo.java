@@ -19,6 +19,10 @@ public class GrupoDeEstudo {
 	//Construtor
 	public GrupoDeEstudo(String nome, String descricao, Pessoa responsavel, Professor orientador) {
 		super();
+		if (responsavel == null)
+			throw new IllegalArgumentException("Nao pode ser null!");
+		if (orientador == null)
+			throw new IllegalArgumentException("Nao pode ser null!");
 		this.nome = nome;
 		this.descricao = descricao;
 		this.responsavel = responsavel;

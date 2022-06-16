@@ -17,7 +17,8 @@ public class Professor extends Pessoa{
 		this.salario = salario;
 	}
 	
-	public double getRemuneracao() {
+	@Override
+	public double getRemuneracao(Pessoa pessoa) {
 		return this.getSalario();
 	}
 

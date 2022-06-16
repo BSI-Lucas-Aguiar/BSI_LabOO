@@ -9,6 +9,8 @@ public class Aluno extends Pessoa{
 	}
 
 	public void setCR(double cR) {
+		if (cR < 0 || cR >10)
+			throw new IllegalArgumentException("Fora do valor permitido");
 		CR = cR;
 	}
 
@@ -17,7 +19,8 @@ public class Aluno extends Pessoa{
 		this.CR = 0;
 	}
 
-	public double getRemuneracao(){
+	@Override
+	public double getRemuneracao(Pessoa pessoa) {
 		return 0;
 	}
 	

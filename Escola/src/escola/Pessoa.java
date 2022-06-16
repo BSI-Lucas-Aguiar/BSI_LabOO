@@ -17,14 +17,7 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 	
-	public double getRemuneracao(Pessoa pessoa) {
-		return getRemuneracao(pessoa);
-	}
-	
-	
-	
-	
-	
+	public abstract double getRemuneracao(Pessoa pessoa);
 	
 	
 }

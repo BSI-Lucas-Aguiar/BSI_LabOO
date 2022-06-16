@@ -16,23 +16,24 @@ public class Principal {
 		
 		aluno1.setCR(7.2);
 		aluno2.setCR(5.5);
-		aluno3.setCR(9);
+		aluno3.setCR(8);
 		
 		//Adição no Grupo de Estudo
 		grupo1.adicionarAluno(aluno1);
 		grupo1.adicionarAluno(aluno2);
 		grupo1.adicionarAluno(aluno3);
 		
-		Aluno alunoMaiorCR = grupo1.getAlunoDeMaiorCR();
-		System.out.println(alunoMaiorCR.getNome());
+		System.out.println("Aluno de Maior CR: "+grupo1.getAlunoDeMaiorCR().getNome());
+		
 		if(grupo1.getResponsavel() instanceof Professor) {
 			System.out.println("O responsável é um professor");
-			Pessoa professorResponsavel = grupo1.getResponsavel();
-			double salario = getRemuneracao(professorResponsavel);
 		}else if(grupo1.getResponsavel() instanceof Aluno) {
 			System.out.println("O responsável é um aluno");
-			Pessoa alunoResponsavel = grupo1.getResponsavel();
 		}
+		
+		Pessoa pessoaResponsavel = grupo1.getResponsavel();
+		double salario = pessoaResponsavel.getRemuneracao(pessoaResponsavel);
+		System.out.println("O salário do responsável é: "+ salario);
 		
 	}
 
